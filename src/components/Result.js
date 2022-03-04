@@ -1,14 +1,6 @@
 import React from 'react';
 
-const Result = ({
-  views,
-  downloads,
-  user,
-  likes,
-  image,
-  tags,
-  largeImage
-}) => {
+const Result = ({ views, downloads, user, likes, image, tags,largeImage,searchTag,setTag }) => {
   const tag = tags.split(',');
   return (
     <div className=''>
@@ -32,6 +24,9 @@ const Result = ({
             <span
               key={index}
               className='bg-slate-400 rounded-md mr-1.5 px-1 py-0.5'
+              onClick={() => {
+                setTag(hashtag);
+              }}
             >
               #{hashtag}
             </span>
