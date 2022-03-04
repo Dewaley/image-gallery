@@ -36,7 +36,6 @@ function App() {
         setIsLoading(false);
       });
   };
-  
   useEffect(() => {
     setIsLoading(true);
     const url = `https://pixabay.com/api/?key=25912123-f6cf2c45649c1add9c51bacc6&q=${tag}&image_type=photo&per_page=30`;
