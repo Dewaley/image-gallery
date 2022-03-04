@@ -96,6 +96,8 @@ function App() {
             <div className='grid sm:grid-cols-3 gap-4 grid-cols-1'>
               {results.map((result) => (
                 <Result
+                  setTag={setTag}
+                  searchTag={getResults}
                   key={result.id}
                   views={result.views}
                   downloads={result.downloads}

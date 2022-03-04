@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Result = ({ views, downloads, user, likes, image, tags,largeImage }) => {
+const Result = ({
+  views,
+  downloads,
+  user,
+  likes,
+  image,
+  tags,
+  largeImage
+}) => {
   const tag = tags.split(',');
   return (
     <div className=''>
@@ -21,12 +29,16 @@ const Result = ({ views, downloads, user, likes, image, tags,largeImage }) => {
         </div>
         <div>
           {tag.map((hashtag, index) => (
-            <span key={index} className='bg-slate-400 rounded-md mr-1.5 px-1 py-0.5'>#{hashtag}</span>
+            <span
+              key={index}
+              className='bg-slate-400 rounded-md mr-1.5 px-1 py-0.5'
+            >
+              #{hashtag}
+            </span>
           ))}
         </div>
         <div className='underline'>
           <a href={largeImage}>Click to get larger image</a>
-          
         </div>
       </div>
     </div>
